@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,11 +14,81 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Person_UI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="69R-QC-Wot">
+                                <rect key="frame" x="36" y="30" width="50" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o0g-gw-Jhh">
+                                <rect key="frame" x="51" y="71" width="35" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gender:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7UI-uL-udk">
+                                <rect key="frame" x="24" y="112" width="62" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enter name here" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gL8-PV-uDn">
+                                <rect key="frame" x="96" y="25" width="127" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="21" minValue="0.0" maxValue="130" translatesAutoresizingMaskIntoConstraints="NO" id="rr5-G9-aWq">
+                                <rect key="frame" x="84" y="66" width="249" height="31"/>
+                            </slider>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="wtj-Wk-IGo">
+                                <rect key="frame" x="96" y="108" width="117" height="29"/>
+                                <segments>
+                                    <segment title="Female"/>
+                                    <segment title="Male"/>
+                                </segments>
+                            </segmentedControl>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7Sg-rC-LQ1">
+                                <rect key="frame" x="16" y="151" width="343" height="510.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="21" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bEb-Pb-tni">
+                                <rect key="frame" x="341" y="71" width="18" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="7UI-uL-udk" firstAttribute="trailing" secondItem="o0g-gw-Jhh" secondAttribute="trailing" priority="1" id="1OM-4S-0xP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="7Sg-rC-LQ1" secondAttribute="trailing" id="3MG-iW-YB4"/>
+                            <constraint firstItem="69R-QC-Wot" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="5tE-sf-ePP"/>
+                            <constraint firstItem="7UI-uL-udk" firstAttribute="top" secondItem="o0g-gw-Jhh" secondAttribute="bottom" constant="20" id="Ae1-ML-08L"/>
+                            <constraint firstItem="gL8-PV-uDn" firstAttribute="leading" secondItem="69R-QC-Wot" secondAttribute="trailing" constant="10" id="CUl-a2-sdK"/>
+                            <constraint firstItem="7Sg-rC-LQ1" firstAttribute="top" secondItem="wtj-Wk-IGo" secondAttribute="bottom" constant="15" id="Coc-pH-wnr"/>
+                            <constraint firstItem="bEb-Pb-tni" firstAttribute="leading" secondItem="rr5-G9-aWq" secondAttribute="trailing" constant="10" id="Dex-YB-rDW"/>
+                            <constraint firstItem="wtj-Wk-IGo" firstAttribute="centerY" secondItem="7UI-uL-udk" secondAttribute="centerY" id="HiK-xq-d3n"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7Sg-rC-LQ1" secondAttribute="bottom" constant="5.5" id="KkD-OV-pbF"/>
+                            <constraint firstItem="gL8-PV-uDn" firstAttribute="centerY" secondItem="69R-QC-Wot" secondAttribute="centerY" id="Ssd-2L-hcn"/>
+                            <constraint firstItem="69R-QC-Wot" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="bKd-ef-cWR"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="7Sg-rC-LQ1" secondAttribute="leading" id="bQQ-VE-a7A"/>
+                            <constraint firstItem="bEb-Pb-tni" firstAttribute="centerY" secondItem="rr5-G9-aWq" secondAttribute="centerY" id="fVr-4E-NY8"/>
+                            <constraint firstItem="o0g-gw-Jhh" firstAttribute="trailing" secondItem="69R-QC-Wot" secondAttribute="trailing" id="jhu-PU-BSr"/>
+                            <constraint firstItem="wtj-Wk-IGo" firstAttribute="leading" secondItem="7UI-uL-udk" secondAttribute="trailing" constant="10" id="kVk-gt-yFW"/>
+                            <constraint firstItem="rr5-G9-aWq" firstAttribute="leading" secondItem="o0g-gw-Jhh" secondAttribute="trailing" id="oAp-xZ-5Yx"/>
+                            <constraint firstItem="o0g-gw-Jhh" firstAttribute="top" secondItem="69R-QC-Wot" secondAttribute="bottom" constant="20" id="rNc-ZY-HkG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bEb-Pb-tni" secondAttribute="trailing" id="rc7-f8-IH7"/>
+                            <constraint firstItem="rr5-G9-aWq" firstAttribute="centerY" secondItem="o0g-gw-Jhh" secondAttribute="centerY" id="v3F-5e-k6y"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
